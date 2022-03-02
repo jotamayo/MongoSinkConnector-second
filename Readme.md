@@ -1,4 +1,4 @@
-# MongoDB-Kafka-Connector-first-steps
+# MongoSinkConnector-second
 
 ## Description
 
@@ -19,14 +19,13 @@ See [List Connectors](https://www.confluent.io/product/connectors/?utm_medium=se
 ## Build
 
 ```
-$ git clone https://github.com/jotamayo/MongoDB-Kafka-Connector-first-steps.git
+$ git clone https://github.com/jotamayo/MongoSinkConnector-second.git
 $ cd MongoDB-Kafka-Connector-first-steps
 $ docker-compose up -d
 ```
 
 When finish all images to run, then you can go to
 
-- See [Control center](http://localhost:9021)
 - You will can connect with database mongodb and check
 
 
@@ -47,6 +46,20 @@ cop > db.firstcollection.insertOne("hello world")
   insertedId: ObjectId("6208db954d9b42dc099b6043")
 }
 db.firstcollection.countDocuments()
+1
+cop > db.secondCollection.insertOne("hello world")
+{
+  acknowledged: true,
+  insertedId: ObjectId("6208db954d9b42dc099b6043")
+}
+db.secondCollection.countDocuments()
+1
+cop > db.deleteCollection.insertOne("hello world")
+{
+  acknowledged: true,
+  insertedId: ObjectId("6208db954d9b42dc099b6043")
+}
+db.deleteCollection.countDocuments()
 1
 ```
 
